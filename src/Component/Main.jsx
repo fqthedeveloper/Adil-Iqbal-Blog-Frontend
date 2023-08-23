@@ -7,14 +7,14 @@ import Footer from './Footer';
 import Blogs from './Blogs/Blogs';
 import Content from './Blogs/Content';
 // import Error from './404';
-import Logout from './Users Component/Logout';
+import Logout from './UserComponent/Logout';
 
 // User Panels url
-import UserDashbord from './Users Component/User-Dashboard';
-import ProfileSetting from './Users Component/ProfileSetting';
-import ChangePassword from './Users Component/ChangePassword';
-import Login from './Users Component/Login';
-import Register from './Users Component/Register';
+import UserDashbord from './UserComponent/User-Dashboard';
+import ProfileSetting from './UserComponent/ProfileSetting';
+import ChangePassword from './UserComponent/ChangePassword';
+import Login from './UserComponent/Login';
+import Register from './UserComponent/Register';
 
 // Admin Panakes Url
 // import AdminLogin from './Admin/AdminLogin';
