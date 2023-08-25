@@ -1,9 +1,13 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+
 
 
 function Logout(){
+    const navigate = useNavigate();
+
     localStorage.removeItem('userLoginStatus')
-    window.location.href='/login';
+    navigate('/login');
 
 return(
     <div></div>

@@ -4,9 +4,12 @@ import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLock, faUserAlt } from '@fortawesome/free-solid-svg-icons'
 //import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 
 function Login() {
+
+    const navigate = useNavigate();
 
     const [userLoginData, setuserLoginData] = useState({
         email: '',
@@ -34,7 +37,7 @@ function Login() {
                     if (res.data.bool === true) {
                         localStorage.setItem('userLoginStatus', true)
                         localStorage.setItem('userId', res.data.user_id)
-                        window.location.href ='/user-dashboard';
+                        navigate('/user-dashboard');
                     }else{
                         setErrorMsg('Invalid Email Or Password')
                     }
