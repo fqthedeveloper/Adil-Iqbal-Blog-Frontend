@@ -56,7 +56,7 @@ function Blog() {
               <br /><br />
 
               <div className="content-vid">
-                <ReactPlayer url={content.video} controls={true} muted={true} playing={false} width='100%' height='auto' />
+                <ReactPlayer url={content.video} controls={true} muted={true} playing={false} width='100%' height='100%' />
               </div>
 
               <br />
