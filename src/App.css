@@ -191,7 +191,6 @@ body{
 /* End Login Page Style  */
 
 /* Start Header Page Style  */
-
 .header-fixed {
 	background-color: black;
 	box-shadow: 0 1px 1px #ccc;
@@ -200,165 +199,86 @@ body{
 	color: #ffffff;
 	box-sizing: border-box;
 	top: -100px;
-	-webkit-transition: top 0.3s;
 	transition: top 0.3s;
-}
-
-.header-fixed .header-limiter {
+  }
+  
+  .header-fixed .header-limiter {
 	max-width: 1200px;
 	text-align: center;
 	margin: 0 auto;
-}
-
-/*	The heade
-HTML CSSResult Skip Results Iframe
-EDIT ON
-r placeholder. It is displayed when the header is fixed to the top of the
-	browser window, in order to prevent the content of the page from jumping up. */
-
-.header-fixed-placeholder {
-	height: 80px;
-	display: none;
-}
-
-/* Logo */
-
-.header-fixed .header-limiter h1 {
-	float: left;
-	font: normal 28px Cookie, Arial, Helvetica, sans-serif;
-	line-height: 40px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+  }
+  
+  /* Logo */
+  .header-fixed .header-limiter h1 {
+	font: normal 28px 'Cookie', Arial, Helvetica, sans-serif;
 	margin: 0;
-}
-
-.header-fixed .header-limiter h1 span {
+  }
+  
+  .header-fixed .header-limiter h1 span {
 	color: #5383d3;
-}
-
-/* The navigation links */
-
-.header-fixed .header-limiter a {
+  }
+  
+  /* The navigation links */
+  .header-fixed .header-limiter nav {
+	display: flex;
+	align-items: center;
+  }
+  
+  /* Toggle button styles */
+  .menu-toggle {
+	display: none; /* Hidden by default */
+	background: none;
+	border: none;
 	color: #ffffff;
-	text-decoration: none;
-}
-
-.header-fixed .header-limiter nav {
-	font: 16px Arial, Helvetica, sans-serif;
-	line-height: 40px;
-	float: right;
-}
-
-.header-fixed .header-limiter nav a {
-	display: inline-block;
-	padding: 0 5px;
-	text-decoration: none;
-	color: #ffffff;
-	opacity: 0.9;
-}
-
-.header-fixed .header-limiter nav a:hover {
-	opacity: 1;
-}
-
-.header-fixed .header-limiter nav a.selected {
-	color: #608bd2;
-	pointer-events: none;
-	opacity: 1;
-}
-
-
-/* Fixed version of the header */
-
-body.fixed .header-fixed {
-	padding: 10px 40px;
-	height: 50px;
-	position: fixed;
-	width: 100%;
-	top: 0;
-	left: 0;
-	z-index: 1;
-}
-
-body.fixed .header-fixed-placeholder {
-	display: block;
-}
-
-body.fixed .header-fixed .header-limiter h1 {
-	font-size: 24px;
-	line-height: 30px;
-}
-
-body.fixed .header-fixed .header-limiter nav {
-	line-height: 28px;
-	font-size: 13px;
-}
-
-
-/* Making the header responsive */
-
-@media all and (max-width: 600px) {
-
+	font-size: 28px;
+	cursor: pointer;
+  }
+  
+  /* Responsive styles */
+  @media all and (max-width: 600px) {
 	.header-fixed {
-		padding: 20px 0;
-		height: 75px;
+	  padding: 10px 0;
+	  height: auto; /* Allow height to adjust automatically */
 	}
-
-	.header-fixed .header-limiter h1 {
-		float: none;
-		margin: -8px 0 10px;
-		text-align: center;
-		font-size: 24px;
-		line-height: 1;
+  
+	.header-fixed .header-limiter {
+	  flex-direction: column; /* Stack items vertically */
+	  align-items: center; /* Center items */
 	}
-
+  
+	.menu-toggle {
+	  display: block; /* Show the toggle button */
+	}
+  
+	/* Hide the nav by default */
 	.header-fixed .header-limiter nav {
-		line-height: 1;
-		float: none;
+	  display: none; /* Hide nav initially */
+	  flex-direction: column; /* Stack nav items vertically */
+	  align-items: center; /* Center nav items */
+	  width: 100%; /* Full width */
+	  background-color: black; /* Background for dropdown */
+	  position: absolute; /* Position it absolutely */
+	  top: 80px; /* Position below the header */
+	  left: 0; /* Align to the left */
+	  z-index: 1000; /* Ensure it appears above other elements */
 	}
-
+  
+	/* Show nav when open */
+	.header-fixed .header-limiter nav.open {
+	  display: flex; /* Show nav when open */
+	}
+  
+	/* Adjust nav links for mobile */
 	.header-fixed .header-limiter nav a {
-		font-size: 13px;
+	  margin: 10px 0; /* Add margin for spacing */
+	  color: #ffffff; /* Ensure links are visible */
 	}
+  }
 
-	body.fixed .header-fixed {
-		display: none;
-	}
-
-}
-
-@media (max-width: 1200px) {
-
-	#login {
-		font-size: medium;
-	}
-
-	#register {
-		font-size: medium;
-	}
-
-}
-
-@media (max-width: 600px) {
-	.header nav {
-		font-size: large;
-	}
-
-	#login {
-		font-size: large;
-	}
-
-	#register {
-		font-size: large;
-	}
-
-}
-
-/* End Header Page Style  */
-
-
-/* Start Home Page Style  */
-
-
-/* Start Banner Section */
+  /* Start Banner Section */
 
 
 .home {
@@ -401,162 +321,211 @@ span {
 
 
 /* End Benner Section */
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center; /* Center content horizontally */
+	width: 100%; /* Full width */
+  }
+  
+  .defrate-container {
+	width: 100%; /* Full width */
+	max-width: 1200px; /* Optional max width */
+	padding: 20px; /* Optional padding */
+  }
+  
+  .defrate-section {
+	width: 100%; /* Full width for each section */
+	margin-bottom: 20px; /* Space between sections */
+	text-align: center; /* Center text */
+  }
+  
+  .author-image img {
+	max-width: 100%; /* Responsive image */
+	height: auto; /* Maintain aspect ratio */
+	border-radius: 50%; /* Optional: make the image circular */
+  }
+/* End Header Page Style  */
 
-/* Start Blogs Pages */
 
-.blogs-container .card__image {
-	height: 100%;
-	width: 100%;
-}
-
-@media (max-width: 650px){
-	
-	.blogs-container {
-		position: relative;
-		font-size: large;
-		width: 100%;
-		height: 100%;
-	}
-
-	.blogs-container .title {
-		font-size: large;
-
-	}
-
-	.blogs-container .card {
-		width: 100%;
-		height: 100%;
-		font-size: 20px;
-		margin: 1 1 1 1;
-	}
-
-	.blogs-container {
-		height: fit-content;
-	}
-
-}
-
-.blogs-container img {
-	height: auto;
-	position: relative;
-	overflow: hidden;
-}
-
-.blogs-container .card__body {
-	font-size: large;
-	height: 100%;
-	width: 100%;
-	top: 0;
-	bottom: 0;
-}
-
-/* End Blogs Pages */
-
+/* Start Home Page Style  */
 
 
 .container {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 20px;
+  }
+  
+  .blog-container {
+	margin-top: 20px;
+  }
+  
+  .blog-post {
+	border: 1px solid #ccc;
+	padding: 15px;
+	margin-bottom: 20px;
+	border-radius: 5px;
+	background-color: #f9f9f9;
+  }
+  
+  .author-details {
 	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	max-width: 1200px;
-	gap: 2rem;
+	align-items: center;
+	margin-top: 10px;
+  }
+  
+  .author-avatar {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	margin-right: 10px;
+  }
+
+/* Start Blogs Pages */
+
+.blogs-container {
+    padding: 20px;
 }
 
-img {
-	max-width: 100%;
-	display: block;
-	object-fit: cover;
+.blogs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
 }
 
-.blogs-container .card {
-	display: flex;
-	flex-direction: column;
-	width: clamp(20rem, calc(20rem + 2vw), 22rem);
-	overflow: hidden;
-	box-shadow: 0 .1rem 1rem rgba(0, 0, 0, 0.1);
-	border-radius: 1em;
-	background: #ECE9E6;
-	background: linear-gradient(to right, #FFFFFF, #ECE9E6);
-
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s;
 }
 
+.card:hover {
+    transform: scale(1.02);
+}
 
+.card__header img {
+    width: 100%;
+    height: auto;
+}
 
 .card__body {
-	padding: 1.5rem;
-	display: flex;
-	flex-direction: column;
-	gap: .5rem;
-}
-
-
-.tag {
-	align-self: flex-start;
-	padding: .25em .75em;
-	border-radius: 1em;
-	font-size: .75rem;
-}
-
-.tag+.tag {
-	margin-left: .5em;
-}
-
-.tag-blue {
-	background: #56CCF2;
-	background: linear-gradient(to bottom, #2F80ED, #56CCF2);
-	color: #fafafa;
-}
-
-.tag-brown {
-	background: #D1913C;
-	background: linear-gradient(to bottom, #FFD194, #D1913C);
-	color: #fafafa;
-}
-
-.tag-red {
-	background: #cb2d3e;
-	background: linear-gradient(to bottom, #ef473a, #cb2d3e);
-	color: #fafafa;
-}
-
-.card__body h4 {
-	font-size: 1.5rem;
-	text-transform: capitalize;
+    padding: 15px;
+    font-size: 16px; /* Default font size */
 }
 
 .card__footer {
-	display: flex;
-	padding: 1rem;
-	margin-top: auto;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    font-size: 14px; /* Default font size */
 }
 
 .user {
-	display: flex;
-	gap: .5rem;
+    display: flex;
+    align-items: center;
 }
 
 .user__image {
-	border-radius: 50%;
+    border-radius: 50%;
+    margin-right: 10px;
 }
 
-.user__info>small {
-	color: #666;
+.tag {
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-bottom: 10px;
 }
 
-/* End Home Blog Page Style  */
+/* Media Queries for Responsive Font Sizes */
+@media (max-width: 1200px) {
+    .card__body {
+        font-size: 15px;
+    }
+    .card__footer {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 992px) {
+    .card__body {
+        font-size: 14px;
+    }
+    .card__footer {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .card__body {
+        font-size: 13px;
+    }
+    .card__footer {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 576px) {
+    .card__body {
+        font-size: 12px;
+    }
+    .card__footer {
+        font-size: 10px;
+    }
+}
+@media (max-width: 476px) {
+    .card__body {
+        font-size: 25px;
+    }
+    .card__footer {
+        font-size: 10px;
+    }
+}
+/* End Blog Page Style  */
 
 /* Start Content Page */
-.content-page{
-	margin: auto;
-}
-
-@media (max-width: 600px) {
-	.content-page{
-		padding-right: 140px;
+.content-page {
+	padding: 20px;
+  }
+  
+  .content-vid {
+	position: relative;
+	padding-top: 56.25%; /* 16:9 Aspect Ratio */
+	height: 0;
+	overflow: hidden;
+  }
+  
+  .content-vid > div {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+  }
+  
+  h1 {
+	font-size: 2rem;
+  }
+  
+  .lead {
+	font-size: 1.2rem;
+  }
+  
+  @media (max-width: 768px) {
+	h1 {
+	  font-size: 1.5rem;
 	}
-
-}
-
+  
+	.lead {
+	  font-size: 1rem;
+	}
+  }
 /* End Content Page */
 
 /* Start Register Page Style  */

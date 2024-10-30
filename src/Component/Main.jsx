@@ -6,7 +6,7 @@ import Footer from './Footer';
 
 import Blogs from './Blogs/Blogs';
 import Content from './Blogs/Content';
-// import Error from './404';
+import Error from './404';
 import Logout from './UserComponent/Logout';
 
 // User Panels url
@@ -40,7 +40,7 @@ function Main() {
 
 
           <Route path="/" element={<Home />} />
-          {/* <Route path="/*" element={<Error />} /> */}
+           <Route path="/*" element={<Error />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/blogs" element={<Blogs />} />
