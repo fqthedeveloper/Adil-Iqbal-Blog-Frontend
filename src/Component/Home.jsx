@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Blogs from './Blogs/Blogs';
+import Auther from './Images/Images.png'
+
+
 
 function Home() {
   const [userData, setUserData] = useState(null);
@@ -69,7 +72,7 @@ function Home() {
         {/* Second Defrate Section for Author Image */}
         <section className="defrate-section" id="defrate-section-two">
           <div className='author-image'>
-            <img src="./Images/Images.png" alt="Author" />
+            <img src={Auther} alt="Author" />
           </div>
         </section>
 
