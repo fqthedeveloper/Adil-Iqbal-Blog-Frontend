@@ -59,7 +59,7 @@ function Home() {
               <h3>{error}</h3>
             ) : userData ? (
               <h3>
-                {isFirstLogin ? 'Welcome' : 'Welcome Back'}, Hello {`${userData.first_name} ${userData.last_name}`}
+                {isFirstLogin ? 'Welcome' : 'Welcome Back'}, Hello {`${userData.first_name}`}
               </h3>
             ) : (
               <h3>Hello Test</h3>

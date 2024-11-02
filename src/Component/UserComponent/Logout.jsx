@@ -1,17 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-
-
-function Logout(){
+function Logout() {
     const navigate = useNavigate();
 
-    localStorage.removeItem('userLoginStatus')
-    navigate('/login');
+    useEffect(() => {
+        localStorage.removeItem('userLoginStatus');
+        navigate('/login');
+        window.location.reload(); 
+    }, [navigate]);
 
-return(
-    <div></div>
-);
+    return (
+        <div></div>
+    );
 }
 
 export default Logout;

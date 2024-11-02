@@ -31,7 +31,7 @@ function Blogs() {
                 <img src={blogs.futher_image} alt={blogs.title} className="card__image" />
               </div>
               <div className="card__body">
-                <span className="tag tag-blue"><h6>{blogs.category.title}</h6></span>
+                <span className="tag tag-blue"><h6 className='text-start'>{blogs.category.title}</h6></span>
                 <h4 className='title'><Link to={`/content/${blogs.id}`}>{blogs.title}</Link></h4>
                 <h5>{blogs.content}</h5>
               </div>
