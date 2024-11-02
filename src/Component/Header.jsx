@@ -22,23 +22,23 @@ function Header() {
 
           {/* Navigation */}
           <nav className={isMenuOpen ? 'open' : ''}>
-            <Link to="/">Home</Link>
+            <Link className="heder-link" to="/">Home</Link>
             &nbsp;&nbsp;
-            <Link to="/blogs">Blog</Link>
+            <Link className="heder-link" to="/blogs">Blog</Link>
             &nbsp;&nbsp;
-            <Link to="/#">About</Link>
+            <Link className="heder-link" to="/#">About</Link>
             &nbsp;&nbsp;
             {userLoginStatus !== 'true' ? (
               <>
-                <Link to="/login" className="btn btn-outline-secondary btn-md">Login</Link>
+                <Link to="/login" className="heder-link btn btn-outline-secondary btn-md">Login</Link>
                 &nbsp;&nbsp;
-                <Link to="/register" className="btn btn-outline-secondary btn-md">Register</Link>
+                <Link to="/register" className="heder-link btn btn-outline-secondary btn-md">Register</Link>
               </>
             ) : (
               <>
-                <Link to="/user-dashboard">Dashboard</Link>
+                <Link className="heder-link" to="/user-dashboard">Dashboard</Link>
                 &nbsp;&nbsp;
-                <Link to="/logout">Logout</Link>
+                <Link className="heder-link" to="/logout">Logout</Link>
               </>
             )}
           </nav>

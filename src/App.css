@@ -266,6 +266,9 @@ body{
 	font-size: 28px;
 	cursor: pointer;
   }
+  .heder-link{
+	font-size: large;
+  }
   
   /* Responsive styles */
   @media all and (max-width: 600px) {
@@ -289,7 +292,7 @@ body{
 	  flex-direction: column; /* Stack nav items vertically */
 	  align-items: center; /* Center nav items */
 	  width: 100%; /* Full width */
-	  background-color: black; /* Background for dropdown */
+	  background-color: #000000; /* Background for dropdown */
 	  position: absolute; /* Position it absolutely */
 	  top: 80px; /* Position below the header */
 	  left: 0; /* Align to the left */
@@ -520,8 +523,30 @@ span {
 /* End Blog Page Style  */
 
 /* Start Content Page */
+/* Add some basic styling to make the UI more attractive and responsive */
+
 .content-page {
 	padding: 20px;
+  }
+  
+  .content-item {
+	margin-bottom: 20px;
+	padding: 20px;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .content-title {
+	font-size: 24px;
+	font-weight: bold;
+	margin-bottom: 10px;
+  }
+  
+  .content-meta {
+	font-size: 16px;
+	color: #666;
+	margin-bottom: 20px;
   }
   
   .content-vid {
@@ -539,22 +564,61 @@ span {
 	height: 100%;
   }
   
-  h1 {
-	font-size: 2rem;
+  .comments-section {
+	margin-top: 20px;
+	padding: 20px;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
   
-  .lead {
-	font-size: 1.2rem;
+  .comment {
+	margin-bottom: 10px;
+	padding: 10px;
+	border-bottom: 1px solid #ddd;
+  }
+  
+  .comment:last-child {
+	border-bottom: none;
+  }
+  
+  .btn {
+	margin-top: 10px;
+  }
+  
+  .form-control {
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
   }
   
   @media (max-width: 768px) {
-	h1 {
-	  font-size: 1.5rem;
+	.content-item {
+	  margin-bottom: 10px;
 	}
+	
+	.content-title {
+	  font-size: 18px;
+	}
+	
+	.content-meta {
+	  font-size: 14px;
+	}
+  }
+
+  .heart-button {
+	font-size: 24px;
+	cursor: pointer;
+  }
   
-	.lead {
-	  font-size: 1rem;
-	}
+  .heart-button:hover {
+	color: #ccc;
+  }
+  
+  .heart-button.liked {
+	color: red;
   }
 /* End Content Page */
 
@@ -1104,7 +1168,7 @@ span {
 }
 
 .menu__link {
-	font-size: 1.2rem;
+	font-size: 1rem;
 	color: #fff;
 	margin: 0 10px;
 	display: inline-block;
@@ -1132,7 +1196,7 @@ span {
 		padding: 20px 10px;
 	}
 	.social-icon__link, .menu__link {
-		font-size: 1.5rem;
+		font-size: 2.5rem;
 	}
 	.footer p {
 		font-size: 0.9rem;
@@ -1141,30 +1205,30 @@ span {
 
 @media (max-width: 480px) {
 	.social-icon__link, .menu__link {
-		font-size: 3rem;
+		font-size: 2.3rem;
 		margin: 5px;
 	}
 	.footer p {
-		font-size: 2rem;
+		font-size: 2.5rem;
 		padding: 0 5px;
 	}
 }
 
-@media (max-width: 320px) {
+@media (max-width: 430px) {
 	.social-icon__link, .menu__link {
-		font-size: 1.5rem;
+		font-size: 2rem;
 	}
 	.footer p {
-		font-size: 1.3rem;
+		font-size: 2rem;
 	}
 }
 
-@media (min-width: 330px) {
+@media (max-width: 330px) {
 	.social-icon__link, .menu__link {
-		font-size: 1.5rem;
+		font-size: 2.3rem;
 	}
 	.footer p {
-		font-size: 1.3rem;
+		font-size: 2rem;
 	}
 }
 
